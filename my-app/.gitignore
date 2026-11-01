@@ -1,5 +1,0 @@
-/android
-node_modules/
-.claude/
-.expo/
-.env*.local

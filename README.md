@@ -1,1 +1,0 @@
-# Mobile2026-2-Projeto1
