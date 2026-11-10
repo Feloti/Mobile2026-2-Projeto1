@@ -1,25 +1,42 @@
 {
-  "expo": {
-    "name": "InsectCollector",
-    "slug": "insect-collector",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false,
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "expo": {
+        "name": "InsectCollector",
+        "slug": "insect-collector",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./assets/icon.png",
+        "userInterfaceStyle": "light",
+        "ios": {
+            "supportsTablet": true
+        },
+        "android": {
+            "adaptiveIcon": {
+                "backgroundColor": "#E6F4FE",
+                "foregroundImage": "./assets/android-icon-foreground.png",
+                "backgroundImage": "./assets/android-icon-background.png",
+                "monochromeImage": "./assets/android-icon-monochrome.png"
+            },
+            "predictiveBackGestureEnabled": false
+        },
+        "web": {
+            "favicon": "./assets/favicon.png"
+        },
+        "plugins": [
+            "expo-sqlite",
+            [
+                "expo-image-picker",
+                {
+                    "cameraPermission": "O InsectCollector usa a câmera para fotografar insetos e identificá-los.",
+                    "photosPermission": "O InsectCollector acessa suas fotos para você escolher a imagem de um inseto."
+                }
+            ],
+            [
+                "expo-location",
+                {
+                    "locationWhenInUsePermission": "O InsectCollector usa a sua localização para escolher o estado e para registrar onde você encontrou o inseto."
+                }
+            ],
+            "expo-status-bar"
+        ]
     }
-  }
 }

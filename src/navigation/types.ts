@@ -1,15 +1,19 @@
+import type { NavigatorScreenParams } from '@react-navigation/native';
+import type { Place } from '../types/location';
+
 export type TabParamList = {
-  Inicio: undefined;
-  Colecao: undefined;
-  Explorar: undefined;
-  Feed: undefined;
-  Mapa: undefined;
+    Inicio: undefined;
+    Colecao: undefined;
+    Explorar: undefined;
+    Mapa: { focusId?: string } | undefined;
 };
 
+export type PickLocationReturn = 'ChooseInsect';
+
 export type RootStackParamList = {
-  Tabs: undefined;
-  InsectDetail: { speciesId: string };
-  Camera: undefined;
-  IdentificationResult: { photoUri?: string };
-  ShareDiscovery: { speciesId: string; photoUri?: string };
+    Tabs: NavigatorScreenParams<TabParamList> | undefined;
+    InsectDetail: { speciesId: string };
+    Camera: undefined;
+    ChooseInsect: { photoUri: string; pickedPlace?: Place };
+    PickLocation: { initial?: Place | null; discoveryId?: string; returnTo?: PickLocationReturn };
 };
